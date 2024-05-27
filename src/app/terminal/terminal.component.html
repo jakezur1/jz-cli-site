@@ -1,0 +1,15 @@
+<div class="terminal" #terminal>
+  <app-command-history [history]="history"></app-command-history>
+  <div class="command-line">
+    <textarea
+      #commandInput
+      class="command-line-input"
+      [(ngModel)]="command"
+      name="command"
+      placeholder=""
+      (keydown.enter)="onSubmit()"
+      (input)="autoResize($event)"
+      autofocus>
+    </textarea>
+  </div>
+</div>

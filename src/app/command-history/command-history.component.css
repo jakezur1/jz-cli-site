@@ -1,0 +1,20 @@
+* {
+  font-family: 'Menlo', monospace;
+}
+
+.command-history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.command-history {
+  display: flex;
+  flex-display: row;
+  width: 100%
+}
+
+.cwd-text {
+  margin: 6;
+}

@@ -1,0 +1,29 @@
+Component Structures
+-------------------------------------------------------------------------------
+Key:
+  -> description
+  ** attribute of component/class
+
+boot-up -> boot-up screen
+   boot-up-proress-bar -> progress bar and set up messages
+
+command-history -> a model representing an input/output of a command and it's output
+   ** cwd: string
+   ** command:
+   ** output
+
+terminal -> terminal screen
+  ** commandHistory -> a list of commandHistory objects
+  ** tree -> file directory tree of the user
+  ** cwd -> A node of the tree representing the cwd
+  command-line -> displays cwd and command line input for running commands
+
+
+output
+  jz -h -> displays information on how to use the Jake Zur (JZ) CLI
+  jz -lp/--list-projects -> lists projects
+  jz -ep=<input>/ --explore-project <project_name> -> lists project name, github link, short description, key concepts/DSA
+  ls -> list current directory
+  cd -> change current directory
+
+

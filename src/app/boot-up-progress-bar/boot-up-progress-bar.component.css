@@ -1,0 +1,30 @@
+* {
+  font-family: 'Menlo', monospace;
+}
+
+.progress-bar-container {
+  width: 900px;
+  height: 20px;
+  border: 2px solid white;
+  padding: 2px
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: white;
+  animation: loadProgressBar 1s linear forwards;
+}
+
+.message {
+  margin-top: 8px;
+  color: white;
+}
+
+@keyframes loadProgressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+* {
+  font-family: 'Menlo', monospace;
+}
+
+.full-screen {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: black;
+  justify-content: center;
+  align-items: center;
+}

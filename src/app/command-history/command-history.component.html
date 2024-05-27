@@ -1,0 +1,9 @@
+<div class="command-history">
+  <div class='command-history-entry' *ngFor="let entry of history">
+    <div class='command-dir-input'>
+      <p class="cwd-text">$</p>
+      <p class="command-text"><strong>$ {{ entry.command }}</strong></p>
+    </div>
+    <p>{{ entry.output }}</p>
+  </div>
+</div>

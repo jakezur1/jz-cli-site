@@ -1,0 +1,36 @@
+* {
+  color: white
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: black;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.command-line {
+  display: flex;
+  width: 100%;
+}
+
+.command-line-input {
+  border-width: 0;
+  width: 100%;
+  background-color: black;
+
+}
+
+.command-line-input:focus {
+  outline: none;
+  background-color: #000;
+  box-shadow: none;
+}
+
+.command-line-input::selection {
+  background: transparent;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
