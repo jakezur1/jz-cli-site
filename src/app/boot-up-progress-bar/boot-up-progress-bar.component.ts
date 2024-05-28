@@ -35,7 +35,7 @@ export class BootUpProgressBarComponent implements OnInit{
       setTimeout(() => {
         this.currentMessage = message;
         if (index === this.bootUpMessages.length - 1) {
-          this.router.navigate(['/terminal']);
+          this.router.navigate(['/desktop']);
         }
       }, cumulativeTime);
     });

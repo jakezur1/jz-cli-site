@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {CommandHistoryComponent, CommandHistoryEntry} from '../command-history/command-history.component';
+import {CommandHistoryComponent, CommandHistoryEntry, CommandType} from '../command-history/command-history.component';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
-import {Router} from '@angular/router';
+import {JzHComponent} from '../jz-h/jz-h.component';
 
 @Component({
   selector: 'app-terminal',
@@ -37,26 +37,35 @@ export class TerminalComponent implements AfterViewInit {
   }
 
   onSubmit(): void {
-    let output = '';
-
-    switch (this.command) {
+    let output: any = {};
+    let trimmedCommand = this.command.trim()
+    console.log(trimmedCommand)
+    let type: CommandType = CommandType.UNKNOWN;
+    switch (trimmedCommand) {
       case 'jz -lp':
-        output = 'Output for jz -lp';
+        output.data = 'Output for jz lp';
+        type = CommandType.JZ_LP
         break;
       case 'jz -ep':
-        output = 'Output for jz -ep';
+        output.data = 'Output for jz ep';
+        type = CommandType.JZ_EP
         break;
       case 'jz -h':
-        output = 'Output for jz -h';
+        output.data = 'Output for jz -h';
+        console.log('hit correct case')
+        type = CommandType.JZ_H
         break;
+      case 'jz':
+        output.data = 'Output for jz -h';
+        type = CommandType.JZ_H
+        break
       default:
-        output = 'Unknown command';
+        output.data = 'Unknown command';
         break;
     }
 
-    this.history.push({command: this.command, output: output});
+    this.history = [...this.history, { type: type, command: this.command, data: output }];
     this.command = '';
-    console.log(this.history)
     this.scrollToBottom();
     this.autoResize();
   }
@@ -69,7 +78,7 @@ export class TerminalComponent implements AfterViewInit {
 
   autoResize(event?: Event): void {
     const textarea = event ? event.target as HTMLTextAreaElement : null;
-    if (textarea) {
+    if (textarea && textarea.textContent != '') {
       textarea.style.height = 'auto';
       textarea.style.height = textarea.scrollHeight + 'px';
     }

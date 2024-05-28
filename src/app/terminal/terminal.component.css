@@ -8,19 +8,24 @@
   height: 100%;
   width: 100%;
   background: black;
-  overflow-y: auto; /* Enable vertical scrolling */
+  margin: 2px;
 }
 
 .command-line {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
 }
 
 .command-line-input {
-  border-width: 0;
+  border-width: 0px;
+  border-color: red;
+  margin-top: 1px;
+  height: 20px;
   width: 100%;
   background-color: black;
-
+  font-family: 'Menlo', monospace;
 }
 
 .command-line-input:focus {
@@ -31,6 +36,5 @@
 
 .command-line-input::selection {
   background: transparent;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
