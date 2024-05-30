@@ -1,5 +1,17 @@
 <div class="desktop">
+  <div class="screen-bar">{{ formattedDate }} {{ formattedTime }}</div>
+<!--  <div class='activities-bar'>-->
+<!--    <p class="activities-tag">Activities</p>-->
+<!--    <div class='icon-bar' *ngFor="let imageUrl of iconUrls">-->
+<!--      <img class="icon" [src]="imageUrl" alt="">-->
+<!--    </div>-->
+<!--  </div>-->
   <div class='terminal'>
+    <div class="top-bar">
+      <div class="red"></div>
+      <div class="yellow"></div>
+      <div class="green"></div>
+    </div>
     <app-terminal></app-terminal>
   </div>
 </div>

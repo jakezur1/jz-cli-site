@@ -1,3 +1,54 @@
+* {
+  font-family: 'Menlo', monospace;
+}
+
+.screen-bar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: gainsboro;
+}
+
+.activities-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 100%;
+  background-color: black;
+  color: gainsboro;
+}
+
+.activities-tag {
+  align-self: flex-start;
+  padding-left: 40px;
+  margin-top: 8px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+.icon-bar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .desktop {
   display: flex;
   width: 100%;
@@ -10,13 +61,50 @@
 }
 
 .terminal {
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   display: flex;
   flex-direction: column;
-  height: 60%;
-  width: 50%;
+  position: absolute;
+  height: 75%;
+  width: 60%;
   background: black;
-  padding: 8px;
   overflow-y: auto;
 }
 
+.top-bar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  background-color: gainsboro;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.red {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: indianred;
+  margin-left: 10px;
+  margin-right: 10px
+}
+
+.yellow {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: gold;
+  margin-right: 10px
+
+}
+
+.green {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: limegreen;
+}

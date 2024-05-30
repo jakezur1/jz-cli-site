@@ -1,0 +1,8 @@
+* {
+  font-family: 'Menlo', monospace;
+}
+
+.gh-link {
+  display: flex;
+  flex-direction: row;
+}

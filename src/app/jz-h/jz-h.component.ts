@@ -10,3 +10,5 @@ import {Component, Input} from '@angular/core';
 export class JzHComponent {
   @Input() data: any = {}
 }
+
+// TODO: change description of commands to their own div so it is right aligned

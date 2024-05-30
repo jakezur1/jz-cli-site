@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-jz-lp',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './jz-lp.component.css'
 })
 export class JzLpComponent {
-
+  @Input() data: any = {}
 }

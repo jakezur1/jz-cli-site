@@ -27,7 +27,7 @@ export class BootUpProgressBarComponent implements OnInit{
   }
 
   updateMessages() {
-    const intervalTimes = this.generateRandomIntervals(1000, this.bootUpMessages.length);
+    const intervalTimes = this.generateRandomIntervals(3000, this.bootUpMessages.length);
     let cumulativeTime = 0;
 
     this.bootUpMessages.forEach((message, index) => {
